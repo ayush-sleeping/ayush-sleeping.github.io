@@ -1,0 +1,263 @@
+%-------------------------
+% Resume in Latex
+% Author : Ayush Mishra
+% License : MIT
+% Updated: 2026-10-28 from the portfolio data (assets/data/*.json)
+%------------------------
+
+%---- Required Packages and Functions ----
+
+\documentclass[a4paper,11pt]{article}
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+% ATS: map glyphs to Unicode so the PDF text layer copies/parses cleanly
+\input{glyphtounicode}
+\pdfgentounicode=1
+\setlength{\multicolsep}{0pt} 
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=1cm, top=1cm, right=1cm, bottom=1cm}
+% Adjust margins
+%\addtolength{\oddsidemargin}{-0.5in}
+%\addtolength{\evensidemargin}{-0.5in}
+%\addtolength{\textwidth}{1in}
+\usepackage[most]{tcolorbox}
+\tcbset{
+	frame code={},
+	center title,
+	left=0pt,
+	right=0pt,
+	top=0pt,
+	bottom=0pt,
+	colback=gray!20,
+	colframe=white,
+	width=\dimexpr\textwidth\relax,
+	enlarge left by=-2mm,
+	boxsep=4pt,
+	arc=0pt,outer arc=0pt,
+}
+
+\urlstyle{same}
+\hypersetup{pdftitle={Ayush Mishra - Resume}, pdfauthor={Ayush Mishra}}
+
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}} 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+% \renewcommand{\labelitemii}{$\circ$}
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-2mm}}
+\newcommand{\cvsection}[1]{%
+\vspace{2mm}
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+%---- End of Packages and Functions ------
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%
+%%%%%% DEFINE ELEMENTS HERE %%%%%%%
+\newcommand{\name}{Ayush Mishra} % Your Name
+\newcommand{\course}{Computer Science} % Your Program
+\newcommand{\skill}{Backend Developer, Laravel, Python, Django} % Headline skills
+\newcommand{\phone}{8174057824} % Your Phone Number
+\newcommand{\emaila}{ayushbm84@gmail.com} %Email 1
+
+\begin{document}
+\fontfamily{cmr}\selectfont
+
+%-------------------------------------------------------------------------
+%----------HEADING-----------------
+%-------------------------------------------------------------------------
+
+\begin{center}
+    {\LARGE \textbf{Ayush Mishra}}
+    
+\vspace{1mm}
+\textbf{Phone:} +91-8174057824 $\cdot$
+\href{mailto:\emaila}{\raisebox{0.0\height}{\footnotesize \faEnvelope} \textcolor{blue}{\emaila}} $\cdot$
+\href{https://github.com/ayush-sleeping}{\raisebox{0.0\height}{\footnotesize \faGithub} \textcolor{blue}{github.com/ayush-sleeping}} \\
+\href{https://www.linkedin.com/in/ayush-bm/}{\raisebox{0.0\height}{\footnotesize \faLinkedin} \textcolor{blue}{linkedin.com/in/ayush-bm}} $\cdot$
+\href{https://ayush-sleeping.github.io/}{\raisebox{0.0\height}{\footnotesize \faGlobe} \textcolor{blue}{ayush-sleeping.github.io}} $\cdot$
+{\raisebox{0.0\height}{\footnotesize \faMapMarker*} Mumbai, India}
+\end{center}
+
+%-------------------------------------------------------------------------
+%-----------SUMMARY-----------
+%-------------------------------------------------------------------------
+\section{\textbf{Summary}}
+\begin{justify}
+\small Backend Developer at Leapswitch Networks, currently focused on \textbf{Python, Django and Next.js}, building on 2+ years of hands-on full stack experience with \textbf{Laravel and MySQL}: web applications and REST APIs, plus frontend work in JavaScript and React.
+\end{justify}
+\vspace{-2mm}
+
+%-------------------------------------------------------------------------
+%-----------EXPERIENCE-----------------
+%-------------------------------------------------------------------------
+\section{\textbf{Experience}}
+  \begin{itemize}[leftmargin=0.13in]
+      \item \textbf{Backend Developer $|$ Leapswitch Networks} \hfill{Oct 2025 - Present (Onsite)}
+\begin{itemize}
+    \item Building and maintaining backend services and REST APIs with Python/Django, Laravel and MySQL, focused on scalable, performant server-side systems and database design.
+    \item Using Claude and Claude Code in the daily workflow for code review, debugging and documentation, with every change reviewed and tested before it ships.
+\end{itemize}
+
+      \item \textbf{Full Stack Web Application Developer $|$ SkillLogic Technologies (Remote)} \hfill{Jul 2025 - Oct 2025}
+\begin{itemize}
+    \item Built web applications with Laravel (backend), React with TypeScript and Tailwind CSS (frontend) and MySQL (database), focusing on clean, secure code and modular design.
+    \item Collaborated remotely with cross-functional teams to deliver client-specific solutions under tight timelines.
+    \item Used GitHub Copilot together with ChatGPT Plus (paid model) for coding, debugging and documentation.
+\end{itemize}
+
+      \item \textbf{Junior Full Stack Web Developer $|$ Technicul Cloud LLP, Mumbai} \hfill{Oct 2023 - Oct 2024 (Onsite)}
+\begin{itemize}
+    \item Developed and maintained Laravel-based REST APIs for real-world apps like Posterking and Doornext, powering communication with mobile frontends (Flutter).
+    \item Worked across full stack: Laravel (backend), MySQL (DB), JavaScript/Bootstrap (frontend).
+    \item Improved performance and UI consistency across major projects like Eternal Weddingz, SeaAndBeyond, and Archerkids.
+    \item Collaborated with team leads to debug production issues and implement new feature modules on tight deadlines.
+    \item Used GitHub Copilot as the main AI coding assistant for code completion and debugging.
+\end{itemize}
+  \end{itemize}
+
+%-------------------------------------------------------------------------
+%-----------EDUCATION-----------
+%-------------------------------------------------------------------------
+\section{\textbf{Education}}
+\begin{itemize}[leftmargin=0.13in]
+    \item \textbf { Bachelor of Science in Computer Science } \hfill{CGPA: 9.23 / 10}\\
+    Shankar Narayan College of Arts \& Commerce (affiliated to University of Mumbai) \hfill{2020 - 2023}
+    
+\end{itemize}
+
+%-------------------------------------------------------------------------
+%-----------Technical skills-----------------
+%-------------------------------------------------------------------------
+\section{\textbf{Technical Skills}}
+ \begin{itemize}[leftmargin=0.13in]
+     \item \textbf{Current Focus}{: Python, Django, Next.js}
+     \vspace{-2mm}
+     \item \textbf{Professional Experience}{: Laravel, MySQL, REST APIs, MVC}
+     \vspace{-2mm}
+     \item \textbf{Languages}{: Python (current focus), JavaScript, Core Java}
+     \vspace{-2mm}
+     \item \textbf{Frontend}{: Next.js (current focus), ReactJS, HTML5, CSS3, Bootstrap, Tailwind CSS}
+     \vspace{-2mm}
+     \item \textbf{Databases}{: MySQL (Relational Database)}
+     \vspace{-2mm}
+     \item \textbf{Tools/Others:} {Git, GitHub, GitLab, Postman, AWS, Linux}
+     \vspace{-2mm}
+     \item \textbf{AI Tools:} {Claude Code, ChatGPT, GitHub Copilot}
+ \end{itemize}
+
+%-------------------------------------------------------------------------
+%-----------PROJECTS-----------------
+%-------------------------------------------------------------------------
+\section{\textbf{Personal Projects}}
+\begin{itemize}[leftmargin=0.13in]
+    \item \textbf{DjangoBaseX} – Django REST API + Next.js Frontend \hfill{Sep 2026 $\cdot$ \href{https://github.com/ayush-sleeping/DjangoBaseX}{{\color{blue}Project Repository}}}
+    \begin{itemize}[itemsep=0pt, topsep=0pt]
+        \item A Django 5 and Next.js full stack starter kit (the Python counterpart of LaraBaseX) with a Django REST Framework API, OpenAPI docs and a Next.js frontend with a typed API client.
+        \item Implemented authentication: login, token refresh, password reset, rate limiting and TOTP two-factor.
+        \item Tools used: Python, Django 5, Django REST Framework, Next.js, React, TypeScript, Tailwind CSS, PostgreSQL, Docker
+    \end{itemize}
+
+    \item \textbf{LaraBaseX} – Laravel Admin Panel + ReactJS Frontend \hfill{Aug 2025 $\cdot$ \href{https://github.com/ayush-sleeping/LaraBaseX}{{\color{blue}Project Repository}}}
+    \begin{itemize}[itemsep=0pt, topsep=0pt]
+        \item A Laravel-based starter kit with built-in authentication, role \& permission management, and CRUD generation, so developers can skip repetitive setup and start building features right away.
+        \item Tools used: Laravel 12, MySQL, ReactJS (Vite + Axios), Shadcn UI, Tailwind CSS
+    \end{itemize}
+\end{itemize}
+
+%-------------------------------------------------------------------------
+%-----------Extracurricular Activities-----------------
+%-------------------------------------------------------------------------
+\section{\textbf{Certifications \& Training}}
+\begin{itemize}[left=0pt, itemsep=0pt, topsep=0pt]
+    \item \textbf{Java Full Stack Development Trainee, Anudip Foundation} \hfill Jun 2023 - Sep 2024 (Hybrid)
+    \begin{itemize}[left=10pt, itemsep=0pt, topsep=0pt]
+        \item Hands-on training in Spring Boot, Hibernate, Angular, and Git; built practice apps using REST APIs and the MVC design pattern. Certified: Advanced Program on Java Full Stack Development using Angular (Anudip / Mettl, 2024).
+    \end{itemize}
+
+    \item \textbf{Youth Employability Program, TNS India Foundation} \hfill Aug 2022 - Sep 2022
+    \begin{itemize}[left=10pt, itemsep=0pt, topsep=0pt]
+        \item Completed Campus to Digital Careers (C2DC) program with Accenture: soft skills, communication, and professional readiness.
+    \end{itemize}
+
+    \item \textbf{Open Source Contributor}
+    \begin{itemize}[left=10pt, itemsep=0pt, topsep=0pt]
+        \item Participated in Hacktoberfest (2021), GWoC (2021), GSSOC (2022), and JGEC Winter of Code (2022).
+    \end{itemize}
+\end{itemize}
+
+%-------------------------------------------
+\end{document}
