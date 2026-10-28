@@ -1,7 +1,7 @@
 // The Help band (design: the un-id'd "Help" section): Download my resume / Have a project in
 // mind?, then "Last updated" and "Edit on GitHub". Last updated is the build month: the site is
 // rebuilt on every content or code change.
-import { SITE } from "@/lib/site";
+import { RESUME, SITE, asset } from "@/lib/site";
 
 const LAST_UPDATED = new Date().toLocaleDateString("en-US", { month: "short", year: "numeric" });
 
@@ -13,8 +13,8 @@ export default function HelpSection() {
           <div className="v4-help-cell">
             <i className="fa-solid fa-file-arrow-down" aria-hidden="true"></i>
             <h3 className="v4-help-title">Download my resume</h3>
-            <p className="v4-help-text">Experience, education and skills on one printable page.</p>
-            <a href="#about" data-print="" className="v4-help-link">
+            <p className="v4-help-text">My latest resume as a PDF: experience, education and skills.</p>
+            <a href={asset(RESUME.path)} download={RESUME.filename} className="v4-help-link">
               Download PDF <i className="fa-solid fa-chevron-right" aria-hidden="true"></i>
             </a>
           </div>

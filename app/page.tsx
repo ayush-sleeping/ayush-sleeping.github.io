@@ -4,7 +4,6 @@
 import Footer from "@/components/layout/Footer";
 import StructuredData from "@/components/layout/StructuredData";
 import Motion from "@/components/client/Motion";
-import PrintLinks from "@/components/client/PrintLinks";
 import Shell, { type SideItem } from "@/components/client/Shell";
 import AboutSection from "@/components/sections/AboutSection";
 import CertificationsSection from "@/components/sections/CertificationsSection";
@@ -111,7 +110,6 @@ export default function Home() {
         />
       </Shell>
       <Motion />
-      <PrintLinks />
     </>
   );
 }

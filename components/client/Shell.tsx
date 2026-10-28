@@ -5,6 +5,7 @@
 // the ⌘K search palette, the scroll progress bar, the back-to-top ring and the toast. Everything
 // here is design behaviour; the data arrives as props from app/page.tsx.
 import { useCallback, useEffect, useRef, useState, type ReactNode } from "react";
+import { RESUME, asset } from "@/lib/site";
 
 export interface ShellLink {
   id: string;
@@ -179,7 +180,14 @@ export default function Shell({
         label: "Download resume",
         hint: "PDF",
         icon: "fa-solid fa-file-arrow-down",
-        act: () => window.print(),
+        act: () => {
+          const a = document.createElement("a");
+          a.href = asset(RESUME.path);
+          a.download = RESUME.filename;
+          document.body.appendChild(a);
+          a.click();
+          a.remove();
+        },
       },
       {
         group: "Actions",
@@ -370,10 +378,6 @@ export default function Shell({
     else if (b > list.scrollTop + list.clientHeight - 8) list.scrollTop = b - list.clientHeight + 8;
   }, [kOpen, kSel, kQuery]);
 
-  const printResume = (e: React.MouseEvent) => {
-    e.preventDefault();
-    window.print();
-  };
   const onDrawerClick = (e: React.MouseEvent) => {
     const a = (e.target as HTMLElement).closest("a[href]");
     if (a && drawer) setDrawer(false);
@@ -428,7 +432,12 @@ export default function Shell({
               <i className="fa-solid fa-book-open v4-row-icon" aria-hidden="true"></i>
               <span className="v4-row-label">Overview</span>
             </a>
-            <a href="#about" onClick={printResume} data-row="" className="v4-row">
+            <a
+              href={asset(RESUME.path)}
+              download={RESUME.filename}
+              data-row=""
+              className="v4-row"
+            >
               <i className="fa-solid fa-file-arrow-down v4-row-icon" aria-hidden="true"></i>
               <span className="v4-row-label">Resume</span>
               <span className="v4-row-meta">PDF</span>

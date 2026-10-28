@@ -1,7 +1,7 @@
 // llms.txt: a plain-text summary of the portfolio for AI assistants (https://llmstxt.org), built
 // from the same sheet data as the page, so it never drifts from what the site says.
 import { getExperience, getProfile, getProjects, getSocials } from "@/lib/data";
-import { SECTION_IDS, SITE } from "@/lib/site";
+import { RESUME, SECTION_IDS, SITE } from "@/lib/site";
 
 export const dynamic = "force-static";
 
@@ -40,6 +40,7 @@ export function GET() {
     `Contact: ${profile.email}${github ? ` · GitHub: ${github}` : ""}`,
     `Location: ${profile.location}`,
     `URL: ${SITE.url}`,
+    `Resume (PDF): ${SITE.url}${RESUME.path}`,
     "",
     "## Sections",
     "",

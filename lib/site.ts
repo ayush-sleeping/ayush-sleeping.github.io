@@ -22,6 +22,16 @@ export const SITE = {
 } as const;
 
 /**
+ * The downloadable resume (public/assets/resume/). Replace the file to update it; every
+ * "Download resume" link reads `path` through asset(), so basePath is applied.
+ */
+export const RESUME = {
+  path: "assets/resume/Ayush_Mishra_Resume.pdf",
+  /** The name the browser saves it under. */
+  filename: "Ayush_Mishra_Resume.pdf",
+} as const;
+
+/**
  * The one-page sections, top to bottom (task.md Phase 11, the v4 design). Each id is its anchor;
  * the five that match the navigation sheet tab (home, about, projects, services, contact) are the
  * header-level ones, the others are About's sub-pages in the sidebar.

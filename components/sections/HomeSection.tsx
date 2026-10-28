@@ -2,7 +2,7 @@
 // buttons, then the 12-column bento. Content from profile, pages/home and stats; the card images
 // and icon classes are the design's (T10).
 import { getPageCopy, getProfile, getSocials, getStats, splitList } from "@/lib/data";
-import { DECOR, asset, imageSrc } from "@/lib/site";
+import { DECOR, RESUME, asset, imageSrc } from "@/lib/site";
 
 const SERVICE_ICONS = ["fas fa-code", "fab fa-dev", "fas fa-code-branch", "fa-solid fa-terminal"];
 const PROFILE_ICONS: Record<string, string> = {
@@ -62,7 +62,7 @@ export default function HomeSection() {
             <a href="#contact" className="v4-btn">
               {profile.cta_label} <i className="fa-solid fa-arrow-right" aria-hidden="true"></i>
             </a>
-            <a href="#about" data-print="" className="v4-btn-ghost">
+            <a href={asset(RESUME.path)} download={RESUME.filename} className="v4-btn-ghost">
               <i className="fa-solid fa-file-arrow-down" aria-hidden="true"></i> Download resume
             </a>
             <a href={github} target="_blank" rel="noopener" className="v4-btn-ghost">
