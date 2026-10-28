@@ -432,12 +432,7 @@ export default function Shell({
               <i className="fa-solid fa-book-open v4-row-icon" aria-hidden="true"></i>
               <span className="v4-row-label">Overview</span>
             </a>
-            <a
-              href={asset(RESUME.path)}
-              download={RESUME.filename}
-              data-row=""
-              className="v4-row"
-            >
+            <a href={asset(RESUME.path)} download={RESUME.filename} data-row="" className="v4-row">
               <i className="fa-solid fa-file-arrow-down v4-row-icon" aria-hidden="true"></i>
               <span className="v4-row-label">Resume</span>
               <span className="v4-row-meta">PDF</span>

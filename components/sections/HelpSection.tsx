@@ -13,7 +13,9 @@ export default function HelpSection() {
           <div className="v4-help-cell">
             <i className="fa-solid fa-file-arrow-down" aria-hidden="true"></i>
             <h3 className="v4-help-title">Download my resume</h3>
-            <p className="v4-help-text">My latest resume as a PDF: experience, education and skills.</p>
+            <p className="v4-help-text">
+              My latest resume as a PDF: experience, education and skills.
+            </p>
             <a href={asset(RESUME.path)} download={RESUME.filename} className="v4-help-link">
               Download PDF <i className="fa-solid fa-chevron-right" aria-hidden="true"></i>
             </a>
