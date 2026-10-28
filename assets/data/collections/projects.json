@@ -1,5 +1,20 @@
 [
   {
+    "id": "djangobasex",
+    "title": "DjangoBaseX",
+    "slug": "djangobasex",
+    "summary": "A Django 5 + Next.js full stack starter kit, the Python counterpart of LaraBaseX. Django REST Framework API with OpenAPI docs and a typed Next.js frontend.",
+    "description": "",
+    "tech_stack": "Django 5, Django REST Framework, Next.js, React, TypeScript, Tailwind CSS, PostgreSQL",
+    "image_url": "assets/img/djangobasex.png",
+    "github_url": "https://github.com/ayush-sleeping/DjangoBaseX",
+    "live_url": "",
+    "category": "Backend + Frontend Development",
+    "year": "Sep 2026",
+    "featured": "TRUE",
+    "order": "1"
+  },
+  {
     "id": "larabasex",
     "title": "LaraBaseX",
     "slug": "larabasex",
@@ -12,7 +27,7 @@
     "category": "Frontend + Backend Development",
     "year": "Aug 2025",
     "featured": "TRUE",
-    "order": "1"
+    "order": "2"
   },
   {
     "id": "writeon",
@@ -27,7 +42,7 @@
     "category": "Frontend + Firebase Database",
     "year": "July 2025",
     "featured": "TRUE",
-    "order": "2"
+    "order": "3"
   },
   {
     "id": "dailybuzz",
@@ -42,7 +57,7 @@
     "category": "Frontend Development",
     "year": "July 2025",
     "featured": "TRUE",
-    "order": "3"
+    "order": "4"
   },
   {
     "id": "personal-portfolio",
@@ -57,7 +72,7 @@
     "category": "Frontend Development",
     "year": "Jun 2025",
     "featured": "TRUE",
-    "order": "4"
+    "order": "5"
   },
   {
     "id": "nft-ecommerce",
@@ -72,7 +87,7 @@
     "category": "Angular CRUD Project",
     "year": "Oct 2023",
     "featured": "TRUE",
-    "order": "5"
+    "order": "6"
   },
   {
     "id": "brija-stream",
@@ -87,7 +102,7 @@
     "category": "Frontend + Search API",
     "year": "Sep 2023",
     "featured": "TRUE",
-    "order": "6"
+    "order": "7"
   },
   {
     "id": "jabri-travel",
@@ -102,6 +117,6 @@
     "category": "Frontend Development",
     "year": "Jun 2022",
     "featured": "TRUE",
-    "order": "7"
+    "order": "8"
   }
 ]
